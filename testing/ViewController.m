@@ -103,7 +103,7 @@
     button.frame = CGRectMake(imageview.bounds.size.width/10, imageview.bounds.size.height/10, 60.0, 30.0);
     
     //set color of button
-    //CGPoint point = CGPointMake(60, 45);
+    
     if([self backButtonColor:imageview.image]) {
         button.backgroundColor = [UIColor whiteColor];
     }
@@ -158,18 +158,9 @@
     //get the luminosity
     CGFloat lum = red*0.2126 + green*0.7152 + blue*0.0722;
     
-    //CGFloat a = red*0.299 + green*0.587 + blue*0.114;
-    
     //return true for white and false for black
     if(lum > 0.179) {return false;}
     else {return true;}
-    
-//    if(a>186) {
-//        return false;
-//    }
-//    else {
-//        return true;
-//    }
 }
 
 @end
